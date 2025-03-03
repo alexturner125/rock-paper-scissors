@@ -6,13 +6,12 @@ body {
 }
 
 .scoreboard {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 48px;
-    padding: 0px 24px;
+    padding: 24px 32px;
 }
 
 .options {
@@ -21,15 +20,16 @@ body {
 }
 
 .options-header {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 24px;
+    margin: 32px 0px 48px 0px;
 }
 
 .options-content {
     display: flex;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
+    gap: 4px;  
 }
 
 .option {
@@ -40,35 +40,54 @@ body {
 }
 
 .option-image {
-    height: 120px;
-    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 240px;
+    width: 240px;
     border: 4px solid black;
-    border-radius: 8px;
-    margin-bottom: 8px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+img {
+    width: 245px;
+    height: auto;
 }
 
 .option-label {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .outcome {
     flex: 1;
-    background-color: lightblue;
-    padding: 24px;
-}
-
-.choices {
     display: flex;
-    justify-content: space-evenly;
     font-size: 24px;
     font-weight: bold;
 }
 
+.human-choice {
+    flex: 1;
+    background-color: lightblue;
+    text-align: center;
+    padding: 24px;
+
+}
+
+.computer-choice {
+    flex: 1;
+    background-color: pink;
+    text-align: center;
+    padding: 24px;
+
+}
+
 .round-winner {
     flex: 1;
-    background-color: #483C32;
-    color: white;
+    background-color: wheat;
+    color: #483C32;
     font-size: 32px;
     text-align: center;
     padding: 24px;

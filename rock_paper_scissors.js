@@ -62,8 +62,10 @@ optionsContent.addEventListener("click", () => {
 
     if (humanScore === 5 && humanScore > computerScore) {
         alert("Victory!");
+        window.location.reload();
     } else if (computerScore === 5 && computerScore > humanScore) {
         alert("Defeat.");
+        window.location.reload();
     }
 });
 
