@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="rock_paper_scissors.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="rock_paper_scissors.js"></script>
+    <div class="scoreboard">
+        <div class="human-score">You:</div>
+        <div class="computer-score">Computer:</div>
+    </div>
+    <div class="options">
+        <div class="options-header">Choose "rock", "paper", or "scissors".</div>
+        <div class="options-content">
+            <div class="option" id="rock">
+                <div class="option-image"></div>
+                <div class="option-label">Rock</div>
+            </div>
+            <div class="option" id="paper">
+                <div class="option-image"></div>
+                <div class="option-label">Paper</div>
+            </div>
+            <div class="option" id="scissors">
+                <div class="option-image"></div>
+                <div class="option-label">Scissors</div>
+            </div>
+        </div> 
+    </div>
+    <div class="outcome">
+        <div class="choices">
+            <div class="human-choice">You chose:</div>
+            <div class="separator">|</div>
+            <div class="computer-choice">Computer chose:</div>
+        </div>
+    </div>
+    <div class="round-winner">The winner is...</div>
 </body>
 </html>
