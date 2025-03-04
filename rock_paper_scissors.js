@@ -2,6 +2,21 @@ let humanScore = 0;
 
 let computerScore = 0;
 
+let humanSelection = ""
+
+function getHumanChoice(e) {
+    let targetClass = e.target.className;
+    console.log(targetClass);
+
+    if (targetClass.includes("rock")) {
+        humanSelection = "rock";
+    } else if (targetClass.includes("paper")) {
+        humanSelection = "paper";
+    } else if (targetClass.includes("scissors")) {
+        humanSelection = "scissors";
+    }
+}
+
 function getComputerChoice() {
     let randomNumber = Math.random() * 3;
     if (randomNumber < 3 && randomNumber >= 2) {
@@ -38,23 +53,8 @@ function updateScore() {
 }
 
 const optionsContent = document.querySelector(".options-content");
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
 
-let humanSelection = "";
-
-rock.addEventListener("click", () => {
-    humanSelection = "rock";
-});
-
-paper.addEventListener("click", () => {
-    humanSelection = "paper";
-});
-
-scissors.addEventListener("click", () => {
-    humanSelection = "scissors";
-}); 
+optionsContent.addEventListener("click", getHumanChoice);
 
 optionsContent.addEventListener("click", () => {
     playRound(humanSelection, getComputerChoice());
